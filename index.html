@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luke's 3D Printing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#070b14;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#5b3dff;
+filter:blur(180px);
+top:-250px;
+left:-200px;
+opacity:.35;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:500px;
+height:500px;
+background:#00c3ff;
+filter:blur(180px);
+bottom:-250px;
+right:-150px;
+opacity:.25;
+z-index:-2;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 10%;
+position:fixed;
+width:100%;
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,.25);
+z-index:100;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#00d4ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#00d4ff,#6a5cff,#ff43c3);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:22px;
+opacity:.8;
+margin-bottom:40px;
+}
+
+.button{
+display:inline-block;
+padding:18px 45px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+color:white;
+background:linear-gradient(45deg,#00d4ff,#6a5cff);
+transition:.3s;
+box-shadow:0 15px 40px rgba(0,212,255,.35);
+}
+
+.button:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 50px rgba(0,212,255,.55);
+}
+
+section{
+padding:120px 10%;
+}
+
+.title{
+font-size:42px;
+text-align:center;
+margin-bottom:60px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+padding:35px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+background:rgba(255,255,255,.08);
+}
+
+.card h3{
+margin:20px 0;
+color:#00d4ff;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.review{
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+}
+
+.review h4{
+margin-top:20px;
+color:#00d4ff;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+opacity:.6;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Luke's 3D Printing</div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Premium <span>3D Printing</span><br>Made Simple.</h1>
+
+<p>
+High-quality custom prints, prototypes, cosplay parts,
+miniatures, replacement pieces, and one-of-a-kind creations.
+</p>
+
+<a class="button" href="#contact">Get a Quote</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚙ Custom Parts</h3>
+<p>
+Need a replacement or custom-designed part?
+We'll print it with precision.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 Gaming & Miniatures</h3>
+<p>
+Detailed tabletop miniatures, terrain,
+and gaming accessories.
+</p>
+</div>
+
+<div class="card">
+<h3>🦸 Cosplay Props</h3>
+<p>
+Helmets, armor, weapons, and accessories
+ready for finishing.
+</p>
+</div>
+
+<div class="card">
+<h3>🚀 Rapid Prototypes</h3>
+<p>
+Fast prototype printing for inventors,
+engineers, and creators.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="title">Recent Prints</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<h2 class="title">Happy Customers</h2>
+
+<div class="cards">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>
+Amazing quality and super fast turnaround.
+My prototype came out perfect.
+</p>
+<h4>- Alex</h4>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>
+Printed my cosplay helmet and it looked incredible.
+Highly recommended!
+</p>
+<h4>- Sarah</h4>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>
+Excellent communication and top-quality prints.
+I'll definitely order again.
+</p>
+<h4>- Mike</h4>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Let's Build Something Awesome</h2>
+
+<p>
+Ready for your next custom print?
+</p>
+
+<br><br>
+
+<a class="button" href="mailto:lukes3dprinting@email.com">
+Email Luke
+</a>
+
+</section>
+
+<footer>
+
+© 2026 Luke's 3D Printing • Crafted with Precision
+
+</footer>
+
+<script>
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.animate([
+{
+opacity:0,
+transform:"translateY(50px)"
+},
+{
+opacity:1,
+transform:"translateY(0px)"
+}
+],{
+duration:800,
+fill:"forwards"
+});
+}
+});
+});
+
+document.querySelectorAll(".card,.gallery img,.review").forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
